@@ -4,6 +4,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('paco');
-    echo "ss";
+    return view('Welcome');
+});
+
+Route::get('/posts', function () {
+    return "Hola bienvenido a posts";
 });
