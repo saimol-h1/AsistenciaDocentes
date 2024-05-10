@@ -8,15 +8,20 @@ class PostController extends Controller
 {
     public function index()
     {
-        return "Hola bienvenido al post ";
+        return view('posts.index');
     }
     public function create()
     {
-        return "Aqui es el creat sale";
+        return view('posts.create');
     }
-
+    //variables ala vista
+    //opcion1
+    // public function show($post)
+    // {
+    //     return view('posts.show', ['post' => $post]);
+    // }
     public function show($post)
     {
-        return "Hola bienvenido a ${post}";
+        return view('posts.show', compact('post'));
     }
 }

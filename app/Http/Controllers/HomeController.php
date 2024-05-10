@@ -8,6 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return "Hola bienvenido a casa ";
+        //se usa un gelper para poder llamar vistas 
+        return view('home');
     }
 }

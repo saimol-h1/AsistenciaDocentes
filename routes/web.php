@@ -7,13 +7,13 @@ use App\Http\Controllers\PostController;
 //**************vistas**************
 
 //***********Rutas con logica separada**************** */
-// Route::get('/', [HomeController::class, "index"]);
+Route::get('/', [HomeController::class, "index"]);
 
-// Route::get('/posts', [PostController::class, "index"]);
+Route::get('/posts', [PostController::class, "index"]);
 
-// Route::get('/posts/create', [PostController::class, "create"]);
+Route::get('/posts/create', [PostController::class, "create"]);
 
-// Route::get('/posts/{post}', [PostController::class, "show"]);
+Route::get('/posts/{post}', [PostController::class, "show"]);
 
 //return view('Welcome');
 
