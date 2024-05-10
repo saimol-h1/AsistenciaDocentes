@@ -2,21 +2,31 @@
 //Es el encardo de resivir las peticiones, que nos permite ver 
 //diferentes contenidos
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+//**************vistas**************
 
-Route::get('/', function () {
-    return view('Welcome');
-});
+//***********Rutas con logica separada**************** */
+// Route::get('/', [HomeController::class, "index"]);
 
-Route::get('/posts', function () {
-    return "Hola bienvenido a posts";
-});
+// Route::get('/posts', [PostController::class, "index"]);
+
+// Route::get('/posts/create', [PostController::class, "create"]);
+
+// Route::get('/posts/{post}', [PostController::class, "show"]);
+
+//return view('Welcome');
+
+// Route::get('/posts', function () {
+//     return "Hola bienvenido a posts";
+// });
 
 //#################rutas con parametros#################
 //****************un parametro**********
 
-Route::get('/posts/{post}', function ($post) {
-    return "Hola bienvenido a ${post}";
-});
+// Route::get('/posts/{post}', function ($post) {
+//     return "Hola bienvenido a ${post}";
+// });
 
 //*******************dos parametros **********************
 // Route::get('/posts/{post}/{categoria}', function ($post, $categoria) {
